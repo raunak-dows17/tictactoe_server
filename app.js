@@ -119,7 +119,7 @@ io.on("connection", function (socket) {
 });
 
 app.get("/", async (req, res) => {
-  res.status(200).send("Hello World!");
+  res.status(200).send("Welcome to the server of the tictactoe game!");
 });
 
 server.listen(port, "0.0.0.0", () => {
