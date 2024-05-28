@@ -3,7 +3,6 @@ const express = require("express");
 const http = require("http");
 require("./config/db");
 const Room = require("./model/room");
-const sls = require("serverless-http");
 
 const app = express();
 const port = process.env.PORT || 9696;
@@ -126,5 +125,3 @@ app.get("/", async (req, res) => {
 server.listen(port, "0.0.0.0", () => {
   console.log(`Server is Up and Running on http://localhost:${port}`);
 });
-
-module.exports.server = sls(app);
